@@ -1,0 +1,146 @@
+<DOCTYPE html>
+<html>
+<head>
+<!-- By Marco Lo Pinto \(0_0)/ -->
+<!-- TESTS: -->
+<!-- #####TESTED ON CHROME 59.x##### -->
+<!-- <input type="file" id="openFile" /> -->
+	<title>Totally Random Battle Simulator</title>
+	
+	<style type="text/css">
+		pth {
+			font-size: 5vw;
+			padding-left: 0.6vw; 
+			padding-right: 0.6vw;
+			color:green;
+			font-family:papyrus;
+		}
+		
+		ph {
+			font-size: 2vw;
+			width: 90%;
+			margin: 5px auto;
+			color:white;
+			border: 5px solid white;
+			background-color: black;
+			font-family:"Arial Black", Gadget, sans-serif;
+		}
+		
+		m_ph {
+			font-size: 2.5vw;
+			color:white;
+			font-family: Impact, Charcoal, sans-serif;
+		}
+		
+		pth_round {
+			font-size: 3vw;
+			padding-left: 0.6vw; 
+			padding-right: 0.6vw;
+			color:green;
+			font-family:papyrus;
+		}
+		
+		div#box {
+			background-color: black;
+			width: 70%;
+			margin: 5px auto;
+			border: 5px solid white;
+			text-align: center;
+			
+		}
+		div#box_battle {
+			background-color: black;
+			width: 95%;
+			margin: 5px auto;
+			border: 5px solid white;
+			text-align: center;
+			
+		}
+		
+		div#left_page {
+			position: absolute;
+				top: 1%;
+				left: 1%;
+				width: 68%
+		}
+		
+		.life_pl{
+				position: absolute;
+				top: 12%;
+				right: 1%;
+				width: 30%;
+				height: 80%;
+				background-color: black;
+				border: 5px solid white;
+				color:white;
+				font-size: 2vw;
+				
+			}
+		
+		.general_button{
+			background-color:black; 
+			border: 4px solid orange;
+			color:orange;
+			font-size: 3vw;
+		}
+		
+		
+	</style>
+</head>
+<body bgcolor="#D3D3D3" style= " background-image: url('back2.png');" >
+	
+	<audio autoplay loop preload="auto" style=" width:0px;">
+	<source src="audio.mp3" type="audio/mpeg">
+	Your browser does not support the audio element.
+	</audio><br />
+	
+	<div id = "first_page" style="text-align: center;" >
+		<pth class="title_screen">Totally Random Battle Simulator</pth>
+		<br><br>
+		<ph class="sub_title">Create your adventure! Dominate in the Tournament Of Luck!</ph>
+		<br><br><br><br><br><br><br>
+		<input type="file" id="openFile" />
+		<br><br><br><br><br>
+		<pre id = "fileContents"></pre>
+		<script type="text/javascript" src="core_trbs.js"></script>
+	</div>
+	<div id = "names_page" style="display: none; text-align: center;" >
+		<pth class="title_screen">\[T]/ The Warriors \[T]/</pth>
+		<br><br>
+		<ph class="sub_title">These are the members!</ph>
+		<br><br><br><br>
+		<!-- the members under here! ლ(ಠ益ಠლ)﻿ (Error is for general error)-->
+		<div class = "box" id = "box">
+		<m_ph id = "members_print">Error!</m_ph>
+		</div>
+		<br>
+		<input type = "button" id="button_run" class = "general_button" value = "START! &#9876;" onClick = "battle_begin()" />
+		<script type="text/javascript" src="core_trbs.js"></script>
+	</div>
+	<div id = "battle_page" style="display: none; text-align: center;" >
+		<div id="left_page" class = "left_page"> 
+			<pth_round id="round_screen" class="title_screen">ROUND 1</pth_round>
+			<br>
+			<div class = "box_battle" id = "box_battle">
+			<m_ph id = "battle_print">Error!</m_ph>
+			</div>
+			<br><br>
+			<input type = "button" id="button_run" class = "general_button" value = "NEXT &#8594;" onClick = "battle_begin()" />
+			<br>
+			<script type="text/javascript" src="core_trbs.js"></script>
+		</div>
+		<textarea class="life_pl" id="life_pl">
+ERROR</textarea>
+	</div>
+	<div id = "finish_page" style="display: none; text-align: center;" >
+		
+		<pth_round id="round_screen" class="title_screen">RESULT</pth_round>
+		<br>
+		<div class = "box_battle" id = "box_battle">
+		<m_ph id = "battle_finish">Noone won (0_o) (maybe an error?)</m_ph>
+		</div>
+		<img src="wat.png" id="img_title" class="img_title" style="display: block; margin: auto; width: 40%;"  />
+		<script type="text/javascript" src="core_trbs.js"></script>	
+	</div>
+</body>
+</html>
