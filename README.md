@@ -1,6 +1,6 @@
 # Totally-Random-Battle-Simulator
 Create a random battle! The limit is the imagination!
-This is a battle generator, load your players and start the fight!
+This is a battle generator, load your players and start the fight! Help me to create the biggest battle-randomizer of the history!
 
 ## How-To
 
