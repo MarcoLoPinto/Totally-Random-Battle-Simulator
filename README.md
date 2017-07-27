@@ -4,7 +4,7 @@ This is a battle generator, load your players and start the fight!
 
 ## How-To
 
-###METHOD 1
+METHOD 1
 
 1. Create a .txt file like that:
 ```
@@ -28,7 +28,7 @@ REMEMBER TO PUT "%&" BETWEEN attack_values and attack_names !
 ```
 2. Once created, save it and import in the browser, and it will do the magic! Easy, isn't it? (OoO)
 
-###METHOD 2
+METHOD 2
 
 1. Click the "SET MANUALLY" button
 2. Fill all the necessary fields
