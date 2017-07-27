@@ -43,8 +43,8 @@ function createPlayersFromFile(file_txt){ //load players in array
 	
 	var array = file_txt.split(/\r?\n/);
 	for(var i=0;i<array.length;i++){
-		var pow123 = array[i+2].split(" ");
-		var name_pow123 = array[i+3].split(" ");
+		var pow123 = array[i+2].split("%&");
+		var name_pow123 = array[i+3].split("%&");
 		
 		if (array[i] == 'undefined') array[i] = "unknown";
 		if (array[i+1] == 'undefined') array[i] = 0;
