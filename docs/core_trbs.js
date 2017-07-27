@@ -1,5 +1,5 @@
-var file_txt = "";
-var str = "";
+var file_txt = ""; //handler for file
+var str = ""; //string for names_page div!
 
 var Partecipants = [];
 var rounds = 0;
@@ -33,7 +33,7 @@ document.getElementById("openFile").addEventListener('change',function(){ //get 
 	
 });
 
-function load_page_begin(){
+function load_page_begin(){ // button "SET MANUALLY" function
 	str="";
 	Partecipants = [];
 	document.getElementById("first_page").style.display = 'none';
@@ -41,7 +41,7 @@ function load_page_begin(){
 	return;
 }
 
-function add_new_player(){
+function add_new_player(){ // button "ADD" function
 	var pow = [];
 	var pow_name = [];
 	var name = document.getElementById('text_name').value;
@@ -55,6 +55,11 @@ function add_new_player(){
 	pow.push(document.getElementById('text_pow2').value);
 	pow.push(document.getElementById('text_pow3').value);
 	
+	if(name=="" || life =="" || pow_name[0]=="" || pow_name[1]=="" || pow_name[2]=="" || pow[0]=="" || pow[1]=="" || pow[2]==""){
+		document.getElementById("number_added_players").innerHTML = "Please fill all fields!";
+		return;
+	}
+	
 	Partecipants.push(new player(name,life,pow,pow_name));
 	
 	document.getElementById('text_name').value="";
@@ -67,18 +72,18 @@ function add_new_player(){
 	document.getElementById('text_pow3_name').value="";
 	
 	str = str + "Name: " + name + "<br>" + " Life: " + life + " LP" + "<br>" + " Powers: " + pow_name[0] + "("+pow[0]+") " + pow_name[1] + "("+pow[1]+") " + pow_name[2] + "("+pow[2]+") " + "<br>" + "<br>";
-	
+	document.getElementById("number_added_players").innerHTML = "Players added: " + Partecipants.length;
 	return;
 }
 
-function goto_ready(){
+function goto_ready(){ // button "READY!" function, after adding players manually
 	document.getElementById("load_page").style.display = 'none';
 	if (str != "") document.getElementById("members_print").innerHTML = str;
 	document.getElementById("names_page").style.display = 'block';
 	return;
 }
 
-function createPlayersFromFile(file_txt){ //load players in array
+function createPlayersFromFile(file_txt){ //load players in array from file
 	
 	str = "";
 	Partecipants = [];
@@ -106,7 +111,7 @@ function createPlayersFromFile(file_txt){ //load players in array
 	return;
 }
 
-function battle_begin(){ //Here we go!
+function battle_begin(){ //Here we go! The real battle!
 	if(document.getElementById("names_page").style.display == 'block')  document.getElementById("names_page").style.display = 'none';
 	if(document.getElementById("battle_page").style.display == 'none')  document.getElementById("battle_page").style.display = 'block';
 	
@@ -231,7 +236,7 @@ function battle_begin(){ //Here we go!
 	return;
 }
 
-function printLifePlayers(){
+function printLifePlayers(){ //print life of players in the textarea
 	var str="";
 	str = "Player's Life:"+"&#10;&#10;" ;
 	for (var i =0; i< Partecipants.length; i++){
@@ -245,7 +250,7 @@ function printLifePlayers(){
 	return;
 }
 
-function toggle_visibility(id) { //not properly working(?)
+function toggle_visibility(id) { //not properly working(?) [OBSOLETE]
     var e = document.getElementById(id);
     if(e.style.display == 'block')
         e.style.display = 'none';
