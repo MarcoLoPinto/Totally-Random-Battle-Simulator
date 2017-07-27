@@ -3,6 +3,9 @@ Create a random battle! The limit is the imagination!
 This is a battle generator, load your players and start the fight!
 
 ## How-To
+
+##METHOD 1
+
 1. Create a .txt file like that:
 ```
 Name_Of_The_Player_1
@@ -25,14 +28,20 @@ REMEMBER TO PUT "%&" BETWEEN attack_values and attack_names !
 ```
 2. Once created, save it and import in the browser, and it will do the magic! Easy, isn't it? (OoO)
 
+##METHOD 2
+
+1. Click the "SET MANUALLY" button
+2. Fill all the necessary fields
+3. Click add to add the player
+4. Once all players are created, click "READY!"
+
 ## News
 
 1. +Now you can see the life of the players!
 2. +Modified graphics a bit.
-3. -removed Herobrine
+3. +Added manual creation of players!
+4. -Removed Entity0
 
 ## To-Do
 
-1. Add manual generation of the players
-2. Add graphics in battle and better background
-3. Major releases that came out of my mind
+1. Major releases that came out of my mind
