@@ -1,4 +1,5 @@
 var file_txt = "";
+var str = "";
 
 var Partecipants = [];
 var rounds = 0;
@@ -18,8 +19,6 @@ function player (name,life,pow,name_pow){
 	this.name_pow = name_pow; // array from 0 to 2
 }
 
-//var p = new player();
-
 document.getElementById("openFile").addEventListener('change',function(){ //get players from file
 	var fr = new FileReader();
 	fr.onload = function(){
@@ -35,14 +34,53 @@ document.getElementById("openFile").addEventListener('change',function(){ //get 
 });
 
 function load_page_begin(){
+	str="";
+	Partecipants = [];
 	document.getElementById("first_page").style.display = 'none';
 	document.getElementById("load_page").style.display = 'block';
 	return;
 }
 
+function add_new_player(){
+	var pow = [];
+	var pow_name = [];
+	var name = document.getElementById('text_name').value;
+	var life = document.getElementById('text_life').value;
+	
+	pow_name.push(document.getElementById('text_pow1_name').value);
+	pow_name.push(document.getElementById('text_pow2_name').value);
+	pow_name.push(document.getElementById('text_pow3_name').value);
+	
+	pow.push(document.getElementById('text_pow1').value);
+	pow.push(document.getElementById('text_pow2').value);
+	pow.push(document.getElementById('text_pow3').value);
+	
+	Partecipants.push(new player(name,life,pow,pow_name));
+	
+	document.getElementById('text_name').value="";
+	document.getElementById('text_life').value="";
+	document.getElementById('text_pow1').value="";
+	document.getElementById('text_pow2').value="";
+	document.getElementById('text_pow3').value="";
+	document.getElementById('text_pow1_name').value="";
+	document.getElementById('text_pow2_name').value="";
+	document.getElementById('text_pow3_name').value="";
+	
+	str = str + "Name: " + name + "<br>" + " Life: " + life + " LP" + "<br>" + " Powers: " + pow_name[0] + "("+pow[0]+") " + pow_name[1] + "("+pow[1]+") " + pow_name[2] + "("+pow[2]+") " + "<br>" + "<br>";
+	
+	return;
+}
+
+function goto_ready(){
+	document.getElementById("load_page").style.display = 'none';
+	if (str != "") document.getElementById("members_print").innerHTML = str;
+	document.getElementById("names_page").style.display = 'block';
+	return;
+}
+
 function createPlayersFromFile(file_txt){ //load players in array
 	
-	var str = "";
+	str = "";
 	Partecipants = [];
 	
 	var array = file_txt.split(/\r?\n/);
