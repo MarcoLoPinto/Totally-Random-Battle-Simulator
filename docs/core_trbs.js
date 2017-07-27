@@ -34,7 +34,11 @@ document.getElementById("openFile").addEventListener('change',function(){ //get 
 	
 });
 
-
+function load_page_begin(){
+	document.getElementById("first_page").style.display = 'none';
+	document.getElementById("load_page").style.display = 'block';
+	return;
+}
 
 function createPlayersFromFile(file_txt){ //load players in array
 	

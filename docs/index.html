@@ -99,15 +99,26 @@
 		<br><br>
 		<ph class="sub_title">&#160;Create your adventure! Dominate in the Tournament Of Luck!&#160;</ph>
 		<br><br><br><br><br><br><br>
-		<input type="file" id="openFile" />
+		<input type="file" id="openFile" class = "general_button" />
 		<br><br><br><br>
 		<ph class="sub_title">&#160;OR&#160;</ph>
 		<br><br><br><br>
-		<input type = "button" id="button_manual_import" class = "general_button" value = "SET MANUALLY &#9881;" />
+		<input type = "button" id="button_manual_import" class = "general_button" value = "SET MANUALLY &#9881;" onClick = "load_page_begin()" />
 		<pre id = "fileContents"></pre>
 		<br><br><br>
 		<script type="text/javascript" src="core_trbs.js"></script>
 	</div>
+	
+	<div id = "load_page" style="display: none; text-align: center;" >
+		<pth class="title_screen">Totally Random Battle Simulator</pth>
+		<br><br>
+		<ph class="sub_title">&#160;Load your players here!&#160;</ph>
+		<br><br><br><br><br><br>
+		
+		<br><br><br>
+		<script type="text/javascript" src="core_trbs.js"></script>
+	</div>
+	
 	<div id = "names_page" style="display: none; text-align: center;" >
 		<pth class="title_screen">\[T]/ The Warriors \[T]/</pth>
 		<br><br>
