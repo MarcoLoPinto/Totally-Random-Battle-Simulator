@@ -7,17 +7,21 @@ This is a battle generator, load your players and start the fight!
 ```
 Name_Of_The_Player_1
 Life
-attack1_value attack2_value attack3_value
-attack1_name attack2_name attack3_name
+attack1_value%&attack2_value%&attack3_value
+attack1_name%&attack2_name%&attack3_name
 Name_Of_The_Player_2
 Life
-attack1_value attack2_value attack3_value
-attack1_name attack2_name attack3_name
+attack1_value%&attack2_value%&attack3_value
+attack1_name%&attack2_name%&attack3_name
 ...
 Name_Of_The_Player_n
 Life
-attack1_value attack2_value attack3_value
-attack1_name attack2_name attack3_name
+attack1_value%&attack2_value%&attack3_value
+attack1_name%&attack2_name%&attack3_name
+```
+
+```
+REMEMBER TO PUT "%&" BETWEEN attack_values and attack_names !
 ```
 2. Once created, save it and import in the browser, and it will do the magic! Easy, isn't it? (OoO)
 
