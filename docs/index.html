@@ -84,6 +84,12 @@
 			font-size: 3vw;
 		}
 		
+		.general_textinput{
+			background-color:black; 
+			border: 4px solid gray;
+			color:white;
+			font-size: 2vw;
+		}
 		
 	</style>
 </head>
@@ -112,10 +118,28 @@
 	<div id = "load_page" style="display: none; text-align: center;" >
 		<pth class="title_screen">Totally Random Battle Simulator</pth>
 		<br><br>
-		<ph class="sub_title">&#160;Load your players here!&#160;</ph>
-		<br><br><br><br><br><br>
 		
+		<m_ph>Name&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Life</m_ph>
+		<br>
+		<input type= "text" id="text_name" class = "general_textinput" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<input type= "text" id="text_life" class = "general_textinput" />
 		<br><br><br>
+		<m_ph>Move 1 Name&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;Move 2 Name&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;Move 3 Name</m_ph>
+		<br>
+		<input type= "text" id="text_pow1_name" class = "general_textinput" />&nbsp;&nbsp;
+		<input type= "text" id="text_pow2_name" class = "general_textinput" />&nbsp;&nbsp;
+		<input type= "text" id="text_pow3_name" class = "general_textinput" />
+		<br><br><br>
+		<m_ph>Move 1 Power&emsp;&emsp;&emsp;&emsp;&emsp;Move 2 Power&emsp;&emsp;&emsp;&emsp;&emsp;Move 3 Power</m_ph>
+		<br>
+		<input type= "text" id="text_pow1" class = "general_textinput" />&nbsp;&nbsp;
+		<input type= "text" id="text_pow2" class = "general_textinput" />&nbsp;&nbsp;
+		<input type= "text" id="text_pow3" class = "general_textinput" />
+		<br><br><br>
+		<input type = "button" id="button_add_player" class = "general_button" value = "ADD &#9733;" />&emsp;&emsp;
+		<input type = "button" id="button_start_players" class = "general_button" value = "START! &#9876;" />
+		<br><br>
+		<m_ph>Players added: 0</m_ph>
 		<script type="text/javascript" src="core_trbs.js"></script>
 	</div>
 	
