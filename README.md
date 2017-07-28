@@ -40,10 +40,12 @@ METHOD 2
 1. +Now you can see the life of the players!
 2. +Modified graphics a bit.
 3. +Added manual creation of players!
-4. -Removed Entity0
+4. Added "BACK" button!
+5. -Removed Entity0
 
 ## To-Do
 
 1. Add "save file" button
-2. Major releases that came out of my mind
+2. Add graphic battle (still to decide)
+3. Major releases that came out of my mind
 
