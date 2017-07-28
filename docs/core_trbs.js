@@ -260,7 +260,10 @@ function toggle_visibility(id) { //not properly working(?) [OBSOLETE]
 
 //FUNCTIONS TO MOVE FROM ONE PAGE TO ANOTHER (BACK BUTTONS)
 
-function return_back_main(){
+function return_back_main(){ //RE-INITIALIZE EVERYTHING
+	str = "";
+	file_txt="";
+	Partecipants = [];
 	document.getElementById("first_page").style.display = 'block';
 	document.getElementById("load_page").style.display = 'none';
 	document.getElementById("names_page").style.display = 'none';
