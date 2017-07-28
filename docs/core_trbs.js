@@ -268,5 +268,6 @@ function return_back_main(){ //RE-INITIALIZE EVERYTHING
 	document.getElementById("first_page").style.display = 'block';
 	document.getElementById("load_page").style.display = 'none';
 	document.getElementById("names_page").style.display = 'none';
+	document.getElementById("finish_page").style.display = 'none';
 	return;
 }
