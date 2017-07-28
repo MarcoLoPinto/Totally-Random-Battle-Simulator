@@ -40,7 +40,7 @@ METHOD 2
 1. +Now you can see the life of the players!
 2. +Modified graphics a bit.
 3. +Added manual creation of players!
-4. Added "BACK" button!
+4. +Added "BACK" button!
 5. -Removed Entity0
 
 ## To-Do
