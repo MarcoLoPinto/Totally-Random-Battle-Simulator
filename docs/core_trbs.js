@@ -264,6 +264,7 @@ function return_back_main(){ //RE-INITIALIZE EVERYTHING
 	str = "";
 	file_txt="";
 	Partecipants = [];
+	document.getElementById("openFile").value="";
 	document.getElementById("first_page").style.display = 'block';
 	document.getElementById("load_page").style.display = 'none';
 	document.getElementById("names_page").style.display = 'none';
