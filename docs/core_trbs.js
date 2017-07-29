@@ -235,7 +235,7 @@ function battle_begin(){ //Here we go! The real battle!
 				}
 				else if(n_obj==5){
 					damage = Math.floor((Math.random() * 50) + 5);
-					str = Partecipants[pl1_number].name + " finds the Bible and uses it against " + Partecipants[pl2_number].name + "!" + " The latter loses " + damage + " LP!" + " (the power of a God (°.°)";
+					str = Partecipants[pl1_number].name + " finds the Bible and uses it against " + Partecipants[pl2_number].name + "!" + " The latter loses " + damage + " LP!" + " (the power of a God (°.°) )";
 					Partecipants[pl2_number].life = parseInt(Partecipants[pl2_number].life) - damage;
 				}
 				else if(n_obj==6){
