@@ -1,5 +1,6 @@
 var file_txt = ""; //handler for file
 var str = ""; //string for names_page div!
+var log = ""; //log of the battle!
 
 var Partecipants = [];
 var rounds = 0;
@@ -259,6 +260,9 @@ function battle_begin(){ //Here we go! The real battle!
 	rounds++;
 	document.getElementById("round_screen").innerHTML = "ROUND " + rounds;
 	document.getElementById("battle_print").innerHTML = str;
+	
+	log = log + "ROUND " + rounds + ":<br>" + str + "<br>"+ "<br>";
+	
 	printLifePlayers();
 	
 	return;
@@ -293,10 +297,20 @@ function return_back_main(){ //RE-INITIALIZE EVERYTHING
 	document.getElementById("members_print").innerHTML = "No players";
 	file_txt="";
 	Partecipants = [];
+	log = "";
+	rounds = 0;
 	document.getElementById("openFile").value="";
 	document.getElementById("first_page").style.display = 'block';
 	document.getElementById("load_page").style.display = 'none';
 	document.getElementById("names_page").style.display = 'none';
 	document.getElementById("finish_page").style.display = 'none';
+	document.getElementById("log_page").style.display = 'none';
+	return;
+}
+
+function goto_log_page(){
+	document.getElementById("finish_page").style.display = 'none';
+	document.getElementById("log_page").style.display = 'block';
+	document.getElementById("log_print").innerHTML = log;
 	return;
 }
