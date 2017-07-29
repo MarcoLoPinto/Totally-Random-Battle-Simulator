@@ -204,7 +204,7 @@ function battle_begin(){ //Here we go! The real battle!
 				break;
 				
 			case 5: //objects!
-				var n_obj = Math.floor((Math.random() * 3) + 1);
+				var n_obj = Math.floor((Math.random() * 7) + 1);
 				var damage;
 				if(n_obj==1){
 					damage = Math.floor((Math.random() * 10) + 10);
@@ -221,6 +221,34 @@ function battle_begin(){ //Here we go! The real battle!
 					str = Partecipants[pl1_number].name + " finds a cat... and uses it against " + Partecipants[pl2_number].name + "!" + " The latter loses " + damage + " LP!";
 					Partecipants[pl2_number].life = parseInt(Partecipants[pl2_number].life) - damage;
 				}
+				else if(n_obj==4){
+					damage = Math.floor((Math.random() * 30) + 10);
+					str = Partecipants[pl1_number].name + " finds a RPG and uses it against " + Partecipants[pl2_number].name + "! ";
+					if(damage>=15 && damage<26){
+						str = str + Partecipants[pl1_number].name + " tries to throw it, but it explodes in his hand! " + Partecipants[pl1_number].name + " loses " + damage + " LP!";
+						Partecipants[pl1_number].life = parseInt(Partecipants[pl1_number].life) - damage;
+					}
+					else {
+						str = str + Partecipants[pl1_number].name + " tries to throw it, and succeeds! " + Partecipants[pl2_number].name + " loses " + damage + " LP!";
+						Partecipants[pl2_number].life = parseInt(Partecipants[pl2_number].life) - damage;
+					}
+				}
+				else if(n_obj==5){
+					damage = Math.floor((Math.random() * 50) + 5);
+					str = Partecipants[pl1_number].name + " finds the Bible and uses it against " + Partecipants[pl2_number].name + "!" + " The latter loses " + damage + " LP!" + " (the power of a God (°.°)";
+					Partecipants[pl2_number].life = parseInt(Partecipants[pl2_number].life) - damage;
+				}
+				else if(n_obj==6){
+					damage = Math.floor((Math.random() * 6) + 1);
+					str = Partecipants[pl1_number].name + " finds a poop... and throws it against " + Partecipants[pl2_number].name + "!" + " The latter loses " + damage + " LP!";
+					Partecipants[pl2_number].life = parseInt(Partecipants[pl2_number].life) - damage;
+				}
+				else if(n_obj==7){
+					damage = Math.floor((Math.random() * 20) + 10);
+					str = Partecipants[pl1_number].name + " finds a chicken-launcher and uses it against " + Partecipants[pl2_number].name + "!" + " The latter loses " + damage + " LP!";
+					Partecipants[pl2_number].life = parseInt(Partecipants[pl2_number].life) - damage;
+				}
+				
 				break;
 				
 			default:
