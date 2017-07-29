@@ -262,6 +262,7 @@ function toggle_visibility(id) { //not properly working(?) [OBSOLETE]
 
 function return_back_main(){ //RE-INITIALIZE EVERYTHING
 	str = "";
+	document.getElementById("members_print").innerHTML = "No players";
 	file_txt="";
 	Partecipants = [];
 	document.getElementById("openFile").value="";
