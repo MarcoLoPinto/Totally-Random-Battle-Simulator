@@ -41,11 +41,11 @@ METHOD 2
 2. +Modified graphics a bit.
 3. +Added manual creation of players!
 4. +Added "BACK" button!
-5. -Removed Entity0
+5. +Added "DOWNLOAD" button (so now you can save your manually-created players)!
+6. -Removed Entity0
 
 ## To-Do
 
-1. Add "save file" button
-2. Add graphic battle (still to decide)
-3. Major releases that came out of my mind
+1. Add graphic battle (still to decide)
+2. Major releases that come out of my mind
 
