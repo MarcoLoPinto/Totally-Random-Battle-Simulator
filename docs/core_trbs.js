@@ -255,7 +255,7 @@ function battle_begin(){ //Here we go! The real battle!
 				}
 				else if(n_obj==4){
 					damage = Math.floor((Math.random() * 30) + 10);
-					str = Partecipants[pl1_number].name + " finds a RPG and uses it against " + Partecipants[pl2_number].name + "! ";
+					str = Partecipants[pl1_number].name + " finds a granade and uses it against " + Partecipants[pl2_number].name + "! ";
 					if(damage>=15 && damage<26){
 						str = str + Partecipants[pl1_number].name + " tries to throw it, but it explodes in his hand! " + Partecipants[pl1_number].name + " loses " + damage + " LP!";
 						Partecipants[pl1_number].life = parseInt(Partecipants[pl1_number].life) - damage;
