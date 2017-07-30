@@ -72,6 +72,8 @@ function add_new_player(){ // button "ADD" function
 	document.getElementById('text_pow2_name').value="";
 	document.getElementById('text_pow3_name').value="";
 	
+	if(file_txt!="") file_txt = file_txt + "\r\n"
+	file_txt = file_txt + name + "\r\n" + pow_name[0] + "%&" + pow_name[1] + "%&" + pow_name[2] + "\r\n" + pow[0] + "%&" + pow[1] + "%&" + pow[2];
 	str = str + "Name: " + name + "<br>" + " Life: " + life + " LP" + "<br>" + " Powers: " + pow_name[0] + "("+pow[0]+") " + pow_name[1] + "("+pow[1]+") " + pow_name[2] + "("+pow[2]+") " + "<br>" + "<br>";
 	document.getElementById("number_added_players").innerHTML = "Players added: " + Partecipants.length;
 	return;
@@ -313,4 +315,19 @@ function goto_log_page(){
 	document.getElementById("log_page").style.display = 'block';
 	document.getElementById("log_print").innerHTML = log;
 	return;
+}
+
+//SAVE FILE
+
+function download() {
+  var element = document.createElement('a');
+  element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(file_txt));
+  element.setAttribute('download', "players.txt");
+
+  element.style.display = 'none';
+  document.body.appendChild(element);
+
+  element.click();
+
+  document.body.removeChild(element);
 }
