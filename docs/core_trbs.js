@@ -330,7 +330,6 @@ function return_back_main(){ //RE-INITIALIZE EVERYTHING
 	Partecipants = [];
 	log = "";
 	rounds = 0;
-	document.getElementById("openFile").value="";
 	document.getElementById("first_page").style.display = 'block';
 	document.getElementById("load_page").style.display = 'none';
 	document.getElementById("names_page").style.display = 'none';
