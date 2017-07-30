@@ -20,6 +20,34 @@ function player (name,life,pow,name_pow){
 	this.name_pow = name_pow; // array from 0 to 2
 }
 
+//Function that create and click a input file button
+function selectFile(){
+	var element = document.createElement("input");
+	
+	element.setAttribute('type','file');
+	element.style.display = 'none';
+	document.body.appendChild(element);
+	
+	element.addEventListener('change',function(){ //get players from file
+		var fr = new FileReader();
+		fr.onload = function(){
+			//document.getElementById("fileContents").textContent = this.result;
+			file_txt = this.result;
+			createPlayersFromFile(file_txt);
+		}
+		fr.readAsText(this.files[0]);
+		document.getElementById("first_page").style.display = 'none';
+		document.getElementById("names_page").style.display = 'block';
+		document.getElementById("img_title").style.display = 'none';
+		
+	});
+	
+	element.click();
+
+	document.body.removeChild(element);
+}
+
+/*
 document.getElementById("openFile").addEventListener('change',function(){ //get players from file
 	var fr = new FileReader();
 	fr.onload = function(){
@@ -33,6 +61,7 @@ document.getElementById("openFile").addEventListener('change',function(){ //get 
 	document.getElementById("img_title").style.display = 'none';
 	
 });
+*/
 
 function load_page_begin(){ // button "SET MANUALLY" function
 	str="";
