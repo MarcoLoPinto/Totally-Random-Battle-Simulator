@@ -366,11 +366,13 @@ function toggle_audio(){
 	var audio = document.getElementById("background_audio");
 	if(audio.muted == true){ 
 		audio.muted = false;
-		document.getElementById("button_audio").value = "AUDIO: ON";
+		document.getElementById("button_audio").value = "  ";
+		document.getElementById("button_audio").title = "Audio: ON";
 	}
 	else {
 		audio.muted = true;
-		document.getElementById("button_audio").value = "AUDIO:OFF";
+		document.getElementById("button_audio").value = "  ";
+		document.getElementById("button_audio").title = "Audio: OFF";
 	}
 }
 
