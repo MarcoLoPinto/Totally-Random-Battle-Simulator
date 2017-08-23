@@ -359,3 +359,18 @@ function download() {
 
   document.body.removeChild(element);
 }
+
+//AUDIO MANAGER
+
+function toggle_audio(){
+	var audio = document.getElementById("background_audio");
+	if(audio.muted == true){ 
+		audio.muted = false;
+		document.getElementById("button_audio").value = "AUDIO: ON";
+	}
+	else {
+		audio.muted = true;
+		document.getElementById("button_audio").value = "AUDIO:OFF";
+	}
+}
+
