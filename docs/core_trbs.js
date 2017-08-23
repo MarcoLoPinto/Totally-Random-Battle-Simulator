@@ -167,6 +167,8 @@ function battle_begin(){ //Here we go! The real battle!
 		document.getElementById("battle_finish").innerHTML = str;
 	}
 	else if(Partecipants.length < 1){
+		str = "Noone won (0_o) (maybe an error?)";
+		document.getElementById("battle_finish").innerHTML = str;
 		document.getElementById("battle_page").style.display = 'none';
 		document.getElementById("finish_page").style.display = 'block';
 		document.getElementById("img_title").style.display = 'block';
